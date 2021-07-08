@@ -1,12 +1,12 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-import { LocationList} from "./location/LocationList"
+import { LocationList } from "./location/LocationList"
 import { LocationProvider } from "./location/LocationProvider"
 // import { EmployeeCard } from "./employee/EmployeeCard"
 // import { CustomerCard } from "./customer/CustomerCard"
-// import { ProductProvider } from "./product/ProductProvider"
-// import { ProductList } from "./product/ProductList"
+import { ProductProvider } from "./product/ProductProvider"
+import { ProductList } from "./product/ProductList"
 
 
 // a Controller Component
@@ -14,16 +14,19 @@ export const ApplicationViews = () => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <ProductProvider>
+                <Route exact path="/">
+                    <Home />
+                    <ProductList />
+                </Route>
+            </ProductProvider>
 
-            {/* Render the Product list when http://localhost:3000/Products 
+            {/* Render the Product list when http://localhost:3000/Products */}
             <ProductProvider>
                 <Route exact path="/Products">
                     <ProductList />
                 </Route>
-            </ProductProvider> */}
+            </ProductProvider>
 
 
             {/* Render the location list when http://localhost:3000/locations */}
@@ -35,11 +38,11 @@ export const ApplicationViews = () => {
             
 
             {/* Render the employee list when http://localhost:3000/employees 
-            <CustomerProvider> 
+            <EmployeeProvider> 
                 <Route path="/employees">
                     <EmployeeCard />
                 </Route> 
-            </CustomerProvider> */} 
+            </EmployeeProvider> */} 
 
             {/* Render the customer list when http://localhost:3000/customers 
             <CustomerProvider> 

@@ -1,13 +1,16 @@
 import React from "react";
+import "./Home.css"
 
 export const Home = () => (
     <>
-        <h2>Kandy Korner</h2>
-        <h3>sweeeeEEEETTTT!!!</h3>
+        <div className="home">
+            <h2>Kandy Korner</h2>
+            <h3>sweeeeEEEET!!!</h3>
 
-        <address>
-            <div>Visit Us at the Nashville North Location</div>
-            <div>500 Puppy Way</div>
-        </address>
+            <address>
+                <div>visit us at our newest location</div>
+                <div>200 White Bridge Road</div>
+            </address>
+        </div>
     </>
 )
