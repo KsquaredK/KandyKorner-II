@@ -1,6 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { KandyKorner } from "./KandyKorner"
+import { Home } from "./Home"
 import { LocationList} from "./location/LocationList"
 import { LocationProvider } from "./location/LocationProvider"
 // import { EmployeeCard } from "./employee/EmployeeCard"
@@ -15,7 +15,7 @@ export const ApplicationViews = () => {
         <>
             {/* Render the location list when http://localhost:3000/ */}
             <Route exact path="/">
-                <KandyKorner />
+                <Home />
             </Route>
 
             {/* Render the Product list when http://localhost:3000/Products 
