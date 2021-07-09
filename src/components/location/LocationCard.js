@@ -9,3 +9,19 @@ export const LocationCard = ({ location }) => (
         <h5 className="location__squarefeet">Store size: {location.squareFeet} square feet</h5>
     </section>
 )
+// examples of logic for "accessible y/n" from auth
+/* 
+then(createdUser => {
+                            if (createdUser.hasOwnProperty("id")) {
+                                localStorage.setItem("startswithq_user", createdUser.id)
+                                history.push("/")
+                            }
+                        })
+                }
+                else {
+                    conflictDialog.current.showModal()
+                } 
+ =============================               
+ 
+                then(user => user.length ? user[0] : false)               
+*/
